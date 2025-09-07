@@ -33,13 +33,14 @@
         app:layout_constraintTop_toBottomOf="@+id/repairText" />
 
     <TextView
-        android:id="@+id/orderType"
+        android:id="@+id/orderText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="72dp"
         android:layout_marginTop="156dp"
         android:layout_marginEnd="36dp"
         android:text="Order Type"
+        android:textAlignment="viewStart"
         app:layout_constraintBottom_toBottomOf="@+id/editTextText"
         app:layout_constraintEnd_toStartOf="@+id/editTextText"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,7 +55,7 @@
         android:ems="10"
         android:inputType="text"
         android:text="Name"
-        app:layout_constraintStart_toEndOf="@+id/orderType"
+        app:layout_constraintStart_toEndOf="@+id/orderText"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
@@ -70,25 +71,28 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextText" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/techText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="58dp"
         android:layout_marginEnd="44dp"
-        android:text="TextView"
+        android:text="Technician"
+        android:textAlignment="viewStart"
         app:layout_constraintBottom_toBottomOf="@+id/editTextText2"
         app:layout_constraintEnd_toStartOf="@+id/editTextText2"
-        app:layout_constraintTop_toBottomOf="@+id/orderType" />
+        app:layout_constraintStart_toStartOf="@+id/orderText"
+        app:layout_constraintTop_toBottomOf="@+id/orderText" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/inspectText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="58dp"
         android:layout_marginEnd="42dp"
-        android:text="TextView"
+        android:text="Technician"
         app:layout_constraintEnd_toStartOf="@+id/editTextText3"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintStart_toStartOf="@+id/techText"
+        app:layout_constraintTop_toBottomOf="@+id/techText" />
 
     <EditText
         android:id="@+id/editTextText3"
@@ -103,15 +107,16 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/paintText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="58dp"
         android:layout_marginEnd="41dp"
-        android:text="TextView"
+        android:text="Inspection"
         app:layout_constraintBottom_toBottomOf="@+id/editTextText4"
         app:layout_constraintEnd_toStartOf="@+id/editTextText4"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintStart_toStartOf="@+id/inspectText"
+        app:layout_constraintTop_toBottomOf="@+id/inspectText" />
 
     <EditText
         android:id="@+id/editTextText4"
@@ -126,14 +131,15 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextText3" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/partsText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="58dp"
         android:layout_marginEnd="40dp"
-        android:text="TextView"
+        android:text="Parts"
         app:layout_constraintEnd_toStartOf="@+id/editTextText5"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        app:layout_constraintStart_toStartOf="@+id/paintText"
+        app:layout_constraintTop_toBottomOf="@+id/paintText" />
 
     <EditText
         android:id="@+id/editTextText5"
@@ -148,15 +154,16 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextText4" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/laborText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="58dp"
         android:layout_marginEnd="40dp"
-        android:text="TextView"
+        android:text="Labor"
         app:layout_constraintBottom_toBottomOf="@+id/editTextText6"
         app:layout_constraintEnd_toStartOf="@+id/editTextText6"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintStart_toStartOf="@+id/partsText"
+        app:layout_constraintTop_toBottomOf="@+id/partsText" />
 
     <EditText
         android:id="@+id/editTextText6"
