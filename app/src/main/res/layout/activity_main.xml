@@ -8,20 +8,50 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/valueTV"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/totalTV" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="66dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/valueTV"
+        app:layout_constraintBottom_toTopOf="@+id/textView16"
+        app:layout_constraintStart_toEndOf="@+id/taxTV" />
+
+    <TextView
+        android:id="@+id/totalTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="220dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/total"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
         android:id="@+id/repairText"
         android:layout_width="141dp"
         android:layout_height="32dp"
         android:layout_marginStart="132dp"
         android:layout_marginTop="28dp"
         android:fontFamily="sans-serif-black"
-        android:text="Repair Order"
+        android:text="@string/repair_order"
         android:textAlignment="center"
-        android:textSize="20sp"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="173dp"
@@ -39,36 +69,34 @@
         android:layout_marginStart="72dp"
         android:layout_marginTop="156dp"
         android:layout_marginEnd="36dp"
-        android:text="Order Type"
+        android:text="@string/order_type"
         android:textAlignment="viewStart"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextText"
-        app:layout_constraintEnd_toStartOf="@+id/editTextText"
+        app:layout_constraintBottom_toBottomOf="@+id/orderTE"
+        app:layout_constraintEnd_toStartOf="@+id/orderTE"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/orderTE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="65dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Name"
         app:layout_constraintStart_toEndOf="@+id/orderText"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textTV" />
 
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/techTE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="28dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintTop_toBottomOf="@+id/orderTE" />
 
     <TextView
         android:id="@+id/techText"
@@ -76,10 +104,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="58dp"
         android:layout_marginEnd="44dp"
-        android:text="Technician"
+        android:text="@string/technician"
         android:textAlignment="viewStart"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextText2"
-        app:layout_constraintEnd_toStartOf="@+id/editTextText2"
+        app:layout_constraintBottom_toBottomOf="@+id/techTE"
+        app:layout_constraintEnd_toStartOf="@+id/techTE"
         app:layout_constraintStart_toStartOf="@+id/orderText"
         app:layout_constraintTop_toBottomOf="@+id/orderText" />
 
@@ -89,22 +117,21 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="58dp"
         android:layout_marginEnd="42dp"
-        android:text="Technician"
-        app:layout_constraintEnd_toStartOf="@+id/editTextText3"
+        android:text="@string/inspection"
+        app:layout_constraintEnd_toStartOf="@+id/inspectionTE"
         app:layout_constraintStart_toStartOf="@+id/techText"
         app:layout_constraintTop_toBottomOf="@+id/techText" />
 
     <EditText
-        android:id="@+id/editTextText3"
+        android:id="@+id/inspectionTE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="28dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+        app:layout_constraintTop_toBottomOf="@+id/techTE" />
 
     <TextView
         android:id="@+id/paintText"
@@ -112,46 +139,47 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="58dp"
         android:layout_marginEnd="41dp"
-        android:text="Inspection"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextText4"
-        app:layout_constraintEnd_toStartOf="@+id/editTextText4"
+        android:text="@string/paint"
+        app:layout_constraintBottom_toBottomOf="@+id/paintTE"
+        app:layout_constraintEnd_toStartOf="@+id/paintTE"
+        app:layout_constraintHorizontal_bias="0.147"
         app:layout_constraintStart_toStartOf="@+id/inspectText"
-        app:layout_constraintTop_toBottomOf="@+id/inspectText" />
+        app:layout_constraintTop_toBottomOf="@+id/inspectText"
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
-        android:id="@+id/editTextText4"
+        android:id="@+id/paintTE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="28dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText3" />
+        app:layout_constraintTop_toBottomOf="@+id/inspectionTE" />
 
     <TextView
         android:id="@+id/partsText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="58dp"
+        android:layout_width="30dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="56dp"
         android:layout_marginEnd="40dp"
-        android:text="Parts"
-        app:layout_constraintEnd_toStartOf="@+id/editTextText5"
+        android:text="@string/parts"
+        app:layout_constraintEnd_toStartOf="@+id/partTE"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/paintText"
         app:layout_constraintTop_toBottomOf="@+id/paintText" />
 
     <EditText
-        android:id="@+id/editTextText5"
+        android:id="@+id/partTE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="28dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText4" />
+        app:layout_constraintTop_toBottomOf="@+id/paintTE" />
 
     <TextView
         android:id="@+id/laborText"
@@ -159,21 +187,62 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="58dp"
         android:layout_marginEnd="40dp"
-        android:text="Labor"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextText6"
-        app:layout_constraintEnd_toStartOf="@+id/editTextText6"
+        android:text="@string/labor"
+        app:layout_constraintBottom_toBottomOf="@+id/laborTE"
+        app:layout_constraintEnd_toStartOf="@+id/laborTE"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/partsText"
-        app:layout_constraintTop_toBottomOf="@+id/partsText" />
+        app:layout_constraintTop_toBottomOf="@+id/partsText"
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
-        android:id="@+id/editTextText6"
+        android:id="@+id/laborTE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="28dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText5" />
+        app:layout_constraintTop_toBottomOf="@+id/partTE" />
+
+    <TextView
+        android:id="@+id/subTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="220dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/subtotal"
+        app:layout_constraintBottom_toTopOf="@+id/taxTV"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/taxTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="79dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/tax"
+        app:layout_constraintBottom_toTopOf="@+id/totalTV"
+        app:layout_constraintStart_toEndOf="@+id/submitButton" />
+
+    <TextView
+        android:id="@+id/valueTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/valueTV"
+        app:layout_constraintBottom_toTopOf="@+id/textView15"
+        app:layout_constraintStart_toEndOf="@+id/subTV" />
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
