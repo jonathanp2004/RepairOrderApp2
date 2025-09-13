@@ -1,2 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+
+    <String-array name= "otArray">
+        <item>Repair</item>
+        <Item>Installation</Item>
+        <item>Restock</item>
+        <Item>Inspection</Item>
+        <item>Maintenance</item>
+    </String-array>
+
+</resources>
