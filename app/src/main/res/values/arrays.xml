@@ -7,6 +7,7 @@
         <item>Restock</item>
         <Item>Inspection</Item>
         <item>Maintenance</item>
+        <item>Deinstallation</item>
     </String-array>
 
 </resources>
