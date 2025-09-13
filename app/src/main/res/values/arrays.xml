@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <String-array name= "otArray">
+    <string-array name= "ot_array">
         <item>Repair</item>
-        <Item>Installation</Item>
+        <item>Installation</item>
         <item>Restock</item>
-        <Item>Inspection</Item>
+        <item>Inspection</item>
         <item>Maintenance</item>
         <item>Deinstallation</item>
-    </String-array>
+    </string-array>
+
 
 </resources>

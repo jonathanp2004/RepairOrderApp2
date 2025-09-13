@@ -2,8 +2,11 @@ package com.example.repairorderapp2;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -15,8 +18,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
 
 
-
-    EditText orderNumberET; // create edit text
+    // create edit text
 
     EditText paintET;
 
@@ -34,14 +36,14 @@ public class MainActivity extends AppCompatActivity {
 
     Button submitB; // create button
 
+    Spinner orderSpinner; // create spinner
+    String selectedOrderType; // variable to hold selected order type
+
+
     View.OnClickListener buttonListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-
-
             computeAndDisplay();
-
-
         }
     };
 
@@ -64,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         //Input EditTexts
-        orderNumberET = findViewById(R.id.orderTE);
+
 
         paintET = findViewById(R.id.paintTE);
 
@@ -74,7 +76,22 @@ public class MainActivity extends AppCompatActivity {
 
         inspectET = findViewById(R.id.inspectionTE);
 
-        //Submit Button
+        orderSpinner = findViewById(R.id.orderSpinner);
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
+                this, R.array.ot_array, android.R.layout.simple_spinner_dropdown_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        orderSpinner.setAdapter(adapter);
+
+        orderSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override public void onItemSelected(AdapterView<?> parent, View view, int position, long id){
+                selectedOrderType = parent.getItemAtPosition(position).toString();
+            }
+            @Override public void onNothingSelected(AdapterView<?> parent) {}
+            });
+
+
+                                                   //Submit Button
         submitB = findViewById(R.id.submitButton);
 
         submitB.setOnClickListener(buttonListener);
