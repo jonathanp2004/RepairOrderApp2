@@ -83,9 +83,9 @@ public class MainActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         orderSpinner.setAdapter(adapter);
 
-        orderSpinner.setOnClickListener(new View.OnClickListener(){
+        /*orderSpinner.setOnClickListener(new View.OnClickListener(){
             @Override public void onClick(View view){
-                // Handle item click
+                orderSpinner.performClick();
             }
         });
 
