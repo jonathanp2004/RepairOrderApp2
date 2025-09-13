@@ -14,6 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,23 +23,16 @@ public class MainActivity extends AppCompatActivity {
     // create edit text
 
     EditText paintET;
-
     EditText partsET;
-
     EditText laborET;
-
     EditText inspectET;
-
     TextView subTotalTV; //initialize text view
-
     TextView taxTV;
-
     TextView totalTV;
-
     Button submitB; // create button
-
     Spinner orderSpinner; // create spinner
     String selectedOrderType; // variable to hold selected order type
+    ArrayList<String> orderTypes;
 
 
     View.OnClickListener buttonListener = new View.OnClickListener() {
@@ -78,10 +73,21 @@ public class MainActivity extends AppCompatActivity {
 
         orderSpinner = findViewById(R.id.orderSpinner);
 
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
+        orderTypes = new ArrayList<>(Arrays.asList(
+                "Maintenance", "Repair", "Inspection", "Restock", "Installation", "Deinstallation"
+        ));
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(
+                this, android.R.layout.simple_spinner_item, orderTypes
+        );
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        orderSpinner.setAdapter(adapter);
+
+        //Spinner setup
+        /*ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
                 this, R.array.ot_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
-        orderSpinner.setAdapter(adapter);
+        orderSpinner.setAdapter(adapter);*/
 
         orderSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override public void onItemSelected(AdapterView<?> parent, View view, int position, long id){
