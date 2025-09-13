@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView16"
+        android:id="@+id/totalValueTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
@@ -18,13 +18,13 @@
         app:layout_constraintStart_toEndOf="@+id/totalTV" />
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/taxValueTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="66dp"
+        android:layout_marginStart="52dp"
         android:layout_marginBottom="16dp"
         android:text="@string/valueTV"
-        app:layout_constraintBottom_toTopOf="@+id/textView16"
+        app:layout_constraintBottom_toTopOf="@+id/totalValueTV"
         app:layout_constraintStart_toEndOf="@+id/taxTV" />
 
     <TextView
@@ -56,7 +56,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="173dp"
         android:layout_marginEnd="180dp"
-        android:text="TextView"
+        android:text="@string/topText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -129,6 +129,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="28dp"
         android:ems="10"
+        android:hint="@string/valueHint"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/techTE" />
@@ -140,6 +141,7 @@
         android:layout_marginTop="58dp"
         android:layout_marginEnd="41dp"
         android:text="@string/paint"
+        android:hint="@string/valueHint"
         app:layout_constraintBottom_toBottomOf="@+id/paintTE"
         app:layout_constraintEnd_toStartOf="@+id/paintTE"
         app:layout_constraintHorizontal_bias="0.147"
@@ -154,6 +156,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="28dp"
         android:ems="10"
+        android:hint="@string/valueHint"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inspectionTE" />
@@ -177,6 +180,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="28dp"
         android:ems="10"
+        android:hint="@string/valueHint"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/paintTE" />
@@ -203,6 +207,7 @@
         android:layout_marginEnd="28dp"
         android:ems="10"
         android:inputType="text"
+        android:hint="@string/valueHint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/partTE" />
 
@@ -213,6 +218,7 @@
         android:layout_marginStart="220dp"
         android:layout_marginBottom="16dp"
         android:text="@string/subtotal"
+        android:hint="@string/valueHint"
         app:layout_constraintBottom_toTopOf="@+id/taxTV"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -223,6 +229,7 @@
         android:layout_marginStart="79dp"
         android:layout_marginBottom="16dp"
         android:text="@string/tax"
+        android:hint="@string/valueHint"
         app:layout_constraintBottom_toTopOf="@+id/totalTV"
         app:layout_constraintStart_toEndOf="@+id/submitButton" />
 
@@ -233,7 +240,7 @@
         android:layout_marginStart="38dp"
         android:layout_marginBottom="16dp"
         android:text="@string/valueTV"
-        app:layout_constraintBottom_toTopOf="@+id/textView15"
+        app:layout_constraintBottom_toTopOf="@+id/taxValueTV"
         app:layout_constraintStart_toEndOf="@+id/subTV" />
 
     <Button

@@ -13,4 +13,6 @@
     <string name="tax">Tax</string>
     <string name="valueTV">$0.00</string>
     <string name="submit">Submit</string>
+    <string name="valueHint">$0.00</string>
+    <string name="topText">TextView</string>
 </resources>
