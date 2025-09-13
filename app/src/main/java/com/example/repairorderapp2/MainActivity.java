@@ -79,8 +79,8 @@ public class MainActivity extends AppCompatActivity {
         orderSpinner = findViewById(R.id.orderSpinner);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
-                this, R.array.ot_array, android.R.layout.simple_spinner_dropdown_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                this, R.array.ot_array, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
         orderSpinner.setAdapter(adapter);
 
         orderSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
