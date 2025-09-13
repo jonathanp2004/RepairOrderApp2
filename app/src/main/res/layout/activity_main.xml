@@ -130,7 +130,7 @@
         android:layout_marginEnd="28dp"
         android:ems="10"
         android:hint="@string/valueHint"
-        android:inputType="text"
+        android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/techTE" />
 
@@ -157,7 +157,7 @@
         android:layout_marginEnd="28dp"
         android:ems="10"
         android:hint="@string/valueHint"
-        android:inputType="text"
+        android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inspectionTE" />
 
@@ -181,7 +181,7 @@
         android:layout_marginEnd="28dp"
         android:ems="10"
         android:hint="@string/valueHint"
-        android:inputType="text"
+        android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/paintTE" />
 
@@ -206,7 +206,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="28dp"
         android:ems="10"
-        android:inputType="text"
+        android:inputType="numberDecimal"
         android:hint="@string/valueHint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/partTE" />
